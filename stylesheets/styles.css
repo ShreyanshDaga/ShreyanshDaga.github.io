@@ -36,19 +36,19 @@
 .heart {
     position:absolute;
     z-index:2;
-    background: -moz-linear-gradient(-90deg,  #660066 0%, #d5093c 40%);
-    background: -webkit-gradient(linear, right 50%, left 50%, color-stop(0%,#660066), color-stop(40%,#d5093c));
-    background: -webkit-linear-gradient(-90deg,  #660066 0%,#d5093c 40%);
-    background: linear-gradient(-90deg,  #660066 0%,#d5093c 40%);
+    background: -moz-linear-gradient(-90deg,  #660066 0%, #bb00bb 40%);
+    background: -webkit-gradient(linear, right 50%, left 50%, color-stop(0%,#660066), color-stop(40%,#bb00bb));
+    background: -webkit-linear-gradient(-90deg,  #660066 0%,#bb00bb 40%);
+    background: linear-gradient(-90deg,  #660066 0%,#bb00bb 40%);
     -webkit-animation: beat 0.7s ease 0s infinite normal;
     -moz-animation: beat 0.7s ease 0s infinite normal;
     animation: beat 0.7s ease 0s infinite normal;
 }
 .heart.center {
-    background: -moz-linear-gradient(-45deg,  #660066 0%, #d5093c 40%);
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#660066), color-stop(40%,#d5093c));
-    background: -webkit-linear-gradient(-45deg,  #660066 0%,#d5093c 40%);
-    background: linear-gradient(-45deg,  #660066 0%,#d5093c 40%);
+    background: -moz-linear-gradient(-45deg,  #660066 0%, #bb00bb 40%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#660066), color-stop(40%,#bb00bb));
+    background: -webkit-linear-gradient(-45deg,  #660066 0%,#bb00bb 40%);
+    background: linear-gradient(-45deg,  #660066 0%,#bb00bb 40%);
 }
 .heart.top {
     z-index:3;
