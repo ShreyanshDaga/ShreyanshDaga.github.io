@@ -45,10 +45,10 @@
     animation: beat 0.7s ease 0s infinite normal;
 }
 .heart.center {
-    background: -moz-linear-gradient(-45deg,  #B80734 0%, #d5093c 40%);
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#B80734), color-stop(40%,#d5093c));
-    background: -webkit-linear-gradient(-45deg,  #B80734 0%,#d5093c 40%);
-    background: linear-gradient(-45deg,  #B80734 0%,#d5093c 40%);
+    background: -moz-linear-gradient(-45deg,  #660066 0%, #d5093c 40%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#660066), color-stop(40%,#d5093c));
+    background: -webkit-linear-gradient(-45deg,  #660066 0%,#d5093c 40%);
+    background: linear-gradient(-45deg,  #660066 0%,#d5093c 40%);
 }
 .heart.top {
     z-index:3;
