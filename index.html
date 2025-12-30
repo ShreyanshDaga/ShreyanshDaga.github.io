@@ -10,11 +10,12 @@
 
     body {
       margin: 0;
-      padding: 20px 0;
+      padding: 40px 0;
       background: linear-gradient(to bottom, #f5e6ca, #e8d8b8);
       font-family: 'Roboto', sans-serif;
       color: #333;
       min-height: 100vh;
+      box-sizing: border-box;
     }
 
     .container {
@@ -23,10 +24,9 @@
       margin: 0 auto;
       background: #fff8e8;
       border: 8px double #003087;
-      /* Indian Railways blue */
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      padding: 30px;
+      padding: 40px;
       position: relative;
       animation: fadeIn 2s ease-in;
     }
@@ -45,11 +45,11 @@
 
     header {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     .logo {
-      width: 120px;
+      width: 140px;
       height: auto;
     }
 
@@ -57,8 +57,8 @@
       font-family: 'Playfair Display', serif;
       font-size: 3em;
       color: #ff6600;
-      /* Orange */
       animation: glow 2s infinite alternate;
+      margin: 20px 0;
     }
 
     @keyframes glow {
@@ -82,8 +82,9 @@
       justify-content: space-around;
       align-items: center;
       font-size: 1.2em;
-      margin: 30px 0;
+      margin: 40px 0;
       flex-wrap: wrap;
+      text-align: center;
     }
 
     .arrow {
@@ -98,9 +99,10 @@
       }
 
       50% {
-        transform: translateX(20px);
+        transform: translateX(-20px);
       }
 
+      /* Arrow points leftward pulse */
       100% {
         transform: translateX(0);
       }
@@ -109,50 +111,48 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 30px 0;
+      margin: 40px 0;
     }
 
     td {
-      padding: 12px;
+      padding: 15px;
       border: 1px solid #ccc;
       text-align: center;
     }
 
-    .highlight {
-      background: #e8f0ff;
-      font-weight: bold;
-    }
-
     .instructions {
       background: #f0f0f0;
-      padding: 20px;
+      padding: 25px;
       border-left: 5px solid #003087;
-      margin: 30px 0;
+      margin: 40px 0;
       border-radius: 8px;
     }
 
     .train-animation {
       text-align: center;
-      margin: 40px 0;
+      margin: 50px 0;
       position: relative;
       overflow: hidden;
-      height: 100px;
+      height: 120px;
     }
 
     .train {
-      font-size: 4em;
+      font-size: 4.5em;
       animation: chug 12s linear infinite;
       white-space: nowrap;
     }
 
     @keyframes chug {
       0% {
+        transform: translateX(100vw);
+      }
+
+      /* Start from right */
+      100% {
         transform: translateX(-100%);
       }
 
-      100% {
-        transform: translateX(100vw);
-      }
+      /* Move to left */
     }
 
     .smoke {
@@ -160,8 +160,9 @@
       font-size: 2em;
       opacity: 0;
       animation: smokeRise 3s infinite;
-      left: 10%;
-      top: 20px;
+      right: 10%;
+      /* Smoke from engine on right */
+      top: 30px;
     }
 
     @keyframes smokeRise {
@@ -172,23 +173,24 @@
 
       100% {
         opacity: 0;
-        transform: translateY(-100px);
+        transform: translateY(-120px);
       }
     }
 
     .contacts {
       display: flex;
       justify-content: space-around;
-      margin: 30px 0;
+      margin: 40px 0;
       font-weight: bold;
       flex-wrap: wrap;
+      text-align: center;
     }
 
     button {
       display: block;
-      margin: 40px auto;
-      padding: 15px 30px;
-      font-size: 1.5em;
+      margin: 50px auto;
+      padding: 18px 35px;
+      font-size: 1.6em;
       background: #ff6600;
       color: white;
       border: none;
@@ -213,18 +215,22 @@
 
     .flag {
       position: absolute;
-      top: 15px;
-      right: 15px;
+      top: 20px;
+      right: 20px;
       font-size: 1.8em;
       background: white;
-      padding: 5px 10px;
+      padding: 8px 12px;
       border-radius: 8px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
       .title {
-        font-size: 2.2em;
+        font-size: 2.4em;
       }
 
       .subtitle {
@@ -232,13 +238,18 @@
       }
 
       .route {
-        font-size: 1em;
+        font-size: 1.1em;
         flex-direction: column;
-        text-align: center;
       }
 
       .arrow {
-        margin: 10px 0;
+        margin: 15px 0;
+        transform: rotate(90deg);
+      }
+
+      /* Adjust for mobile */
+      .train {
+        font-size: 3.5em;
       }
     }
   </style>
@@ -249,7 +260,7 @@
     <div class="flag">🇮🇳 1st Birthday Celebration</div>
     <header>
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Indian_Railways_logo.png/800px-Indian_Railways_logo.png"
+        src="https://e7.pngegg.com/pngimages/340/843/png-clipart-rail-transport-indian-railways-railway-recruitment-board-exam-rrb-south-east-central-railway-zone-india-text-logo-thumbnail.png"
         alt="Indian Railways Logo" class="logo">
       <h1 class="title">Our Little Angel turns 1</h1>
       <p class="subtitle">Please Join us in Celebrating This wonderful milestone</p>
@@ -257,7 +268,7 @@
 
     <div class="route">
       <div>Booked from<br><strong>YOUR HOME</strong><br>Journey Date: 10/01/2026</div>
-      <div class="arrow">Boarding at → PUNE JN<br>Boarding Time: 6:30 PM</div>
+      <div class="arrow">← Boarding at PUNE JN<br>Boarding Time: 6:30 PM</div>
       <div>To<br><strong>ASHOK NAGAR CLUBHOUSE</strong><br>Ashok Co-op Society, Ashok Nagar Pune-7</div>
     </div>
 
@@ -280,9 +291,9 @@
 
     <div class="train-animation">
       <div class="smoke" style="animation-delay: 0s;">💨</div>
-      <div class="smoke" style="animation-delay: 1s; left: 15%;">💨</div>
-      <div class="smoke" style="animation-delay: 2s; left: 20%;">💨</div>
-      <div class="train">🚂🚃🚃🚃🚃</div>
+      <div class="smoke" style="animation-delay: 1s; right: 15%;">💨</div>
+      <div class="smoke" style="animation-delay: 2s; right: 20%;">💨</div>
+      <div class="train">🚃🚃🚃🚃🚂</div> <!-- Engine on right for right-to-left movement -->
     </div>
 
     <div class="instructions">
@@ -311,7 +322,7 @@
         particleCount: 200,
         spread: 70,
         origin: { y: 0.6 },
-        colors: ['#ff6600', '#003087', '#ff9933'] // Saffron, Blue, Green
+        colors: ['#ff6600', '#003087', '#ff9933']
       });
     });
   </script>
