@@ -130,15 +130,15 @@
 
     .train-animation {
       text-align: center;
-      margin: 50px 0;
+      margin: 15px 0;
       position: relative;
       overflow: hidden;
-      height: 120px;
+      height: 60px;
     }
 
     .train {
-      font-size: 4.5em;
-      animation: chug 12s linear infinite;
+      font-size: 2.5em;
+      animation: chug 4s linear infinite;
       white-space: nowrap;
     }
 
@@ -257,19 +257,14 @@
 
 <body>
   <div class="container">
-    <div class="flag">🇮🇳 1st Birthday Celebration</div>
     <header>
-      <img
-        src="https://e7.pngegg.com/pngimages/340/843/png-clipart-rail-transport-indian-railways-railway-recruitment-board-exam-rrb-south-east-central-railway-zone-india-text-logo-thumbnail.png"
-        alt="Indian Railways Logo" class="logo">
+      <img src="./images/flag.png" alt="Indian Railways Logo" class="logo">
       <h1 class="title">Our Little Angel turns 1</h1>
       <p class="subtitle">Please Join us in Celebrating This wonderful milestone</p>
     </header>
 
     <div class="route">
-      <div>Booked from<br><strong>YOUR HOME</strong><br>Journey Date: 10/01/2026</div>
-      <div class="arrow">← Boarding at PUNE JN<br>Boarding Time: 6:30 PM</div>
-      <div>To<br><strong>ASHOK NAGAR CLUBHOUSE</strong><br>Ashok Co-op Society, Ashok Nagar Pune-7</div>
+      <div><br><strong>ASHOK NAGAR CLUBHOUSE</strong><br>Ashok Co-op Society, Ashok Nagar Pune-7</div>
     </div>
 
     <div class="ticket">
@@ -282,29 +277,15 @@
         <tr>
           <td>Quota<br>General (GN)</td>
           <td>Distance<br>* km</td>
-          <td>Date<br>10/01/2026 18:30pm</td>
+          <td>Date<br>Sunday 10/01/2026 18:30</td>
         </tr>
       </table>
 
-      <h2>You are warmly invited to board the Birthday Train!</h2>
+      <h2 style="text-align: center;">You are warmly invited to board the Birthday Train!</h2>
     </div>
 
     <div class="train-animation">
-      <div class="smoke" style="animation-delay: 0s;">💨</div>
-      <div class="smoke" style="animation-delay: 1s; right: 15%;">💨</div>
-      <div class="smoke" style="animation-delay: 2s; right: 20%;">💨</div>
-      <div class="train">🚃🚃🚃🚃🚂</div> <!-- Engine on right for right-to-left movement -->
-    </div>
-
-    <div class="instructions">
-      <strong>Instructions</strong>
-      <ul>
-        <li>Cakes, games & a lot more await!</li>
-        <li>Your presence will make our little station complete.</li>
-        <li>Hop aboard the Birthday Choo-Choo Train and celebrate Aavritti's 1st birthday.</li>
-        <li>No gifts, only your lovely presence and blessings!</li>
-        <li>Daga family eagerly awaits you!!</li>
-      </ul>
+      <div class="train">🚂🚃🚃🚃🚃</div> <!-- Engine on right for right-to-left movement -->
     </div>
 
     <div class="contacts">
@@ -319,8 +300,8 @@
   <script>
     document.getElementById('confetti-btn').addEventListener('click', () => {
       confetti({
-        particleCount: 200,
-        spread: 70,
+        particleCount: 600,
+        spread: 100,
         origin: { y: 0.6 },
         colors: ['#ff6600', '#003087', '#ff9933']
       });
