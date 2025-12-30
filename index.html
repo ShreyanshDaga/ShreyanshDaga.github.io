@@ -1,25 +1,297 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Khevy <3</title>
+<!DOCTYPE html>
+<html lang="en">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aavritti's 1st Birthday Train Invitation</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap');
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div id="background"></div>
-    <div id="chest">
-	<div class="heart left side top"></div>
-	<div class="heart center">&hearts;</div>
-	<div class="heart right side"></div>
-</div>
-  </body>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f5e6ca, #e8d8b8);
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      background: #fff8e8;
+      border: 8px double #003087;
+      /* Indian Railways blue */
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      position: relative;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 100px;
+    }
+
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      color: #ff6600;
+      /* Orange */
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff6600;
+      }
+
+      to {
+        text-shadow: 0 0 20px #ff9900, 0 0 30px #ff6600;
+      }
+    }
+
+    .subtitle {
+      font-size: 1.8em;
+      color: #003087;
+      margin: 10px 0;
+    }
+
+    .ticket {
+      background: #fff;
+      border: 2px dashed #003087;
+      padding: 20px;
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .route {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+
+    .arrow {
+      font-size: 2em;
+      color: #003087;
+      animation: moveArrow 1.5s infinite;
+    }
+
+    @keyframes moveArrow {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(20px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .highlight {
+      background: #e8f0ff;
+      font-weight: bold;
+    }
+
+    .instructions {
+      background: #f0f0f0;
+      padding: 15px;
+      border-left: 5px solid #003087;
+      margin: 20px 0;
+    }
+
+    .train-animation {
+      text-align: center;
+      margin: 30px 0;
+      position: relative;
+    }
+
+    .train {
+      font-size: 4em;
+      animation: chug 10s linear infinite;
+    }
+
+    @keyframes chug {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(100vw);
+      }
+    }
+
+    .smoke {
+      position: absolute;
+      font-size: 2em;
+      opacity: 0;
+      animation: smokeRise 3s infinite;
+    }
+
+    @keyframes smokeRise {
+      0% {
+        opacity: 0.8;
+        transform: translateY(0);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-100px);
+      }
+    }
+
+    .contacts {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 15px 30px;
+      font-size: 1.5em;
+      background: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .flag {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 2em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="flag">🇮🇳 1st Birthday Celebration</div>
+    <header>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Indian_Railways.svg/512px-Indian_Railways.svg.png"
+        alt="Indian Railways Logo" class="logo">
+      <h1 class="title">Our Little Angel turns 1</h1>
+      <p class="subtitle">Please Join us in Celebrating This wonderful milestone</p>
+    </header>
+
+    <div class="route">
+      <div>Booked from<br><strong>YOUR HOME</strong><br>Journey Date: 10/01/2026</div>
+      <div class="arrow">Boarding at → PUNE JN<br>Boarding Time: 6:30 PM</div>
+      <div>To<br><strong>ASHOK NAGAR CLUBHOUSE</strong><br>Ashok Co-op Society, Ashok Nagar Pune-7</div>
+    </div>
+
+    <div class="ticket">
+      <table>
+        <tr>
+          <td>PNR<br><strong>2025010800</strong></td>
+          <td>Train No./Train Name<br><strong>08125 / AAVRITTI B'DAY SPL. EXP.</strong></td>
+          <td>Class<br><strong>FIRST AC (H1)</strong></td>
+        </tr>
+        <tr>
+          <td>Quota<br>General (GN)</td>
+          <td>Distance<br>* km</td>
+          <td>Date<br>10/01/2026 18:30pm</td>
+        </tr>
+      </table>
+
+      <h2>You are warmly invited to board the Birthday Train!</h2>
+    </div>
+
+    <div class="train-animation">
+      <div class="smoke" style="left: 20%; animation-delay: 0s;">💨</div>
+      <div class="smoke" style="left: 25%; animation-delay: 1s;">💨</div>
+      <div class="smoke" style="left: 30%; animation-delay: 2s;">💨</div>
+      <div class="train">🚂🚃🚃🚃🚃</div>
+    </div>
+
+    <div class="instructions">
+      <strong>Instructions</strong>
+      <ul>
+        <li>Cakes, games & a lot more await!</li>
+        <li>Your presence will make our little station complete.</li>
+        <li>Hop aboard the Birthday Choo-Choo Train and celebrate Aavritti's 1st birthday.</li>
+        <li>No gifts, only your lovely presence and blessings!</li>
+        <li>Daga family eagerly awaits you!!</li>
+      </ul>
+    </div>
+
+    <div class="contacts">
+      <div>Shreyansh Daga<br>9970788396</div>
+      <div>Rachana Daga<br>8225009148</div>
+    </div>
+
+    <button id="confetti-btn">Board the Train! 🎉</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    document.getElementById('confetti-btn').addEventListener('click', () => {
+      confetti({
+        particleCount: 200,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#ff6600', '#003087', '#ff9933'] // Saffron, Blue, Green
+      });
+    });
+  </script>
+</body>
+
 </html>
