@@ -10,26 +10,23 @@
 
     body {
       margin: 0;
-      padding: 0;
+      padding: 20px 0;
       background: linear-gradient(to bottom, #f5e6ca, #e8d8b8);
       font-family: 'Roboto', sans-serif;
       color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       min-height: 100vh;
-      overflow: hidden;
     }
 
     .container {
       width: 90%;
       max-width: 800px;
+      margin: 0 auto;
       background: #fff8e8;
       border: 8px double #003087;
       /* Indian Railways blue */
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      padding: 20px;
+      padding: 30px;
       position: relative;
       animation: fadeIn 2s ease-in;
     }
@@ -48,11 +45,12 @@
 
     header {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
     .logo {
-      width: 100px;
+      width: 120px;
+      height: auto;
     }
 
     .title {
@@ -79,20 +77,13 @@
       margin: 10px 0;
     }
 
-    .ticket {
-      background: #fff;
-      border: 2px dashed #003087;
-      padding: 20px;
-      margin: 20px 0;
-      text-align: center;
-    }
-
     .route {
       display: flex;
       justify-content: space-around;
       align-items: center;
       font-size: 1.2em;
-      margin: 20px 0;
+      margin: 30px 0;
+      flex-wrap: wrap;
     }
 
     .arrow {
@@ -118,12 +109,13 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 20px 0;
+      margin: 30px 0;
     }
 
     td {
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #ccc;
+      text-align: center;
     }
 
     .highlight {
@@ -133,20 +125,24 @@
 
     .instructions {
       background: #f0f0f0;
-      padding: 15px;
+      padding: 20px;
       border-left: 5px solid #003087;
-      margin: 20px 0;
+      margin: 30px 0;
+      border-radius: 8px;
     }
 
     .train-animation {
       text-align: center;
-      margin: 30px 0;
+      margin: 40px 0;
       position: relative;
+      overflow: hidden;
+      height: 100px;
     }
 
     .train {
       font-size: 4em;
-      animation: chug 10s linear infinite;
+      animation: chug 12s linear infinite;
+      white-space: nowrap;
     }
 
     @keyframes chug {
@@ -164,6 +160,8 @@
       font-size: 2em;
       opacity: 0;
       animation: smokeRise 3s infinite;
+      left: 10%;
+      top: 20px;
     }
 
     @keyframes smokeRise {
@@ -181,13 +179,14 @@
     .contacts {
       display: flex;
       justify-content: space-around;
-      margin: 20px 0;
+      margin: 30px 0;
       font-weight: bold;
+      flex-wrap: wrap;
     }
 
     button {
       display: block;
-      margin: 20px auto;
+      margin: 40px auto;
       padding: 15px 30px;
       font-size: 1.5em;
       background: #ff6600;
@@ -214,9 +213,33 @@
 
     .flag {
       position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 2em;
+      top: 15px;
+      right: 15px;
+      font-size: 1.8em;
+      background: white;
+      padding: 5px 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 2.2em;
+      }
+
+      .subtitle {
+        font-size: 1.5em;
+      }
+
+      .route {
+        font-size: 1em;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .arrow {
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
@@ -226,7 +249,7 @@
     <div class="flag">🇮🇳 1st Birthday Celebration</div>
     <header>
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Indian_Railways.svg/512px-Indian_Railways.svg.png"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Indian_Railways_logo.png/800px-Indian_Railways_logo.png"
         alt="Indian Railways Logo" class="logo">
       <h1 class="title">Our Little Angel turns 1</h1>
       <p class="subtitle">Please Join us in Celebrating This wonderful milestone</p>
@@ -256,9 +279,9 @@
     </div>
 
     <div class="train-animation">
-      <div class="smoke" style="left: 20%; animation-delay: 0s;">💨</div>
-      <div class="smoke" style="left: 25%; animation-delay: 1s;">💨</div>
-      <div class="smoke" style="left: 30%; animation-delay: 2s;">💨</div>
+      <div class="smoke" style="animation-delay: 0s;">💨</div>
+      <div class="smoke" style="animation-delay: 1s; left: 15%;">💨</div>
+      <div class="smoke" style="animation-delay: 2s; left: 20%;">💨</div>
       <div class="train">🚂🚃🚃🚃🚃</div>
     </div>
 
